@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(199, 197, 197);
+}
+.sidenav{
+    width: 20%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    font-size: medium;
+    font-weight: 600;
+    color:#251F51;
+    padding-left: 5 px;
+}
+a:hover{
+    color: grey;
+}
+
+/* Rith dive decore */
+#right-content{
+    position: absolute;
+    left: 20%;
+    width: 100%;
+    padding-left: 5px;
+}

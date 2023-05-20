@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="{% static 'simsapp/castyle.css' %} " />
+    <title>CA Results</title>
+  </head>
+  <body>
+      <table  class="table1">
+        <tr>
+          <th>Module Name</th>
+          <th>Module Code</th>
+          <th>Unit</th>
+          <th>Marks %</th>
+          <!-- <th>Grade %</th> -->
+          <th>Remarks %</th>
+          <th></th>
+          
+        </tr>
+        <tr>
+          <td>Cell 1</td>
+          <td>{{cadata.course}}</td>
+          <td>{{cadata.marks}}</td>
+          <td>35</td>
+          <!-- <td>A</td> -->
+          <td>Pass</td>
+          <td>
+          <button type="submit" id="signe-button" onclick="signPopup()" >Sign</button>
+          <button type="submit" id="claim-button" onclick="claimPopup()">Claim</button>
+          </td>
+        </tr>
+      </table>
+ 
+    <h1>Tabel two</h1>
+    <hr>
+    <table  class="table2">
+      <tr>
+        <td>Total Unit</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Cell 1</td>
+        <td>150</td>
+      </tr>
+      <tr>
+        <td>Points</td>
+        <td>639</td>
+      </tr>
+      <tr>
+        <td>Annula GPA</td>
+        <td>4.3</td>
+      </tr>
+      <tr>
+        <td>Annula Remarks</td>
+        <td>Pass</td>
+      </tr>
+    </table>
+  </div>
+  <script>
+    function claimPopup() {
+      // Define the URL of the pop-up window
+      var url = "components/claimpopup.html";
+      
+      // Define the size and position of the pop-up window
+      var width = 600;
+      var height = 400;
+      var left = (screen.width - width) / 2;
+      var top = (screen.height - height) / 2;
+      
+      // Open the pop-up window
+      window.open(url, "pop-up-window", "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top);
+    }
+
+  </script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+body {
+  align-items: center;
+}
+
+.result {
+  width: 70%;
+  height: 70%;
+  /* margin: 0 auto; */
+  /* align-items: center; */
+  /* border: 2px solid; */
+  border-radius: 10px;
+}
+.result-head {
+  text-align: center;
+  margin: 0 auto;
+  height: 20%;
+  background-color: #251f51;
+  margin-top: 10px;
+  border: 1px solid;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+.input-type {
+  padding-top: 10px;
+  width: 100%;
+}
+.input-type label {
+  width: 20%;
+  font-size: 16px;
+  font-weight: 600;
+ display: inline-block;
+  padding-bottom: 5px;
+  padding-left: 10px;
+}
+.input-type input {
+  width: 50%;
+  padding-left: 10px;
+  border: 2px solid #251f51;
+  border-radius: 2px; 
+  padding: 5px; 
+}
+
+register label {
+  margin: 10 auto;
+  padding-right: 10px;
+}
+
+.result-btn button {
+  background-color: rgba(0, 128, 0, 0.596);
+  border: 1px solid grey;
+  height: 30px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 800;
+}
+.result-btn {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 5px; */
+}

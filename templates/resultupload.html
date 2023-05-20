@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="{% static 'simsapp/reusltupload.css' %} " />
+    <script
+      src="https://kit.fontawesome.com/2426fea4b2.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="result">
+      <div class="result-head"><p>Upload Student Result</p></div>
+      <form action="" method="post">
+        <div class="input-type">
+          <label for="">Programm :</label>
+          <input type="text" />
+        </div>
+        <div class="input-type">
+          <label for="">Student Name :</label>
+          <!-- <i class="fa-sharp fa-solid fa-user"></i> -->
+          <input type="text" />
+        </div>
+        <div class="input-type">
+          <label for="">Module No:</label>
+          <input type="text" />
+        </div>
+        <div class="input-type">
+          <label for="">Result for:</label>
+          <input type="text" />
+        </div>
+        <div class="input-type">
+          <label for="">Marks %:</label>
+          <input type="text" />
+        </div>
+        <hr />
+        <div class="result-btn"><button type="submit">Upload</button></div>
+      </form>
+    </div>
+  </body>
+</html>
