@@ -1,11 +1,10 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="{% static 'simsapp/castyle.css' %} " />
+    <link rel="stylesheet" type="text/css" href="style/castyle.css" />
     <title>CA Results</title>
   </head>
   <body>
@@ -14,16 +13,20 @@
           <th>Module Name</th>
           <th>Module Code</th>
           <th>Unit</th>
-          <th>Marks %</th>
+          <th>Test One %</th>
+          <th>Test Two %</th>
+          <th>Quize %</th>
           <!-- <th>Grade %</th> -->
           <th>Remarks %</th>
           <th></th>
           
         </tr>
         <tr>
-          <td>Cell 1</td>
-          <td>{{cadata.course}}</td>
-          <td>{{cadata.marks}}</td>
+          <td>Database Concept</td>
+          <td>IT2345</td>
+          <td>9</td>
+          <td>9</td>
+          <td>9</td>
           <td>35</td>
           <!-- <td>A</td> -->
           <td>Pass</td>
@@ -34,7 +37,7 @@
         </tr>
       </table>
  
-    <h1>Tabel two</h1>
+    <!-- <h1>Tabel two</h1> -->
     <hr>
     <table  class="table2">
       <tr>

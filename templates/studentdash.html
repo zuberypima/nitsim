@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style/studentdash.css" />
+    <script
+      src="https://kit.fontawesome.com/2426fea4b2.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="sidenav">
+      <div class="user">
+        <img src="style/girl.jfif" alt="Avatar">
+      </div>
+      <hr>
+      <ul>
+        <li>
+          <i class="fa-solid fa-gauge"></i>
+        </i><a href="teacherdash.html">Dashboard</a>
+        </li>
+      </ul>
+      <hr />
+      <ul>
+        <li>      
+          <i class="fa-solid fa-user "></i>
+          <a href="#">Consolata Student</a></li>
+      </ul>
+      <hr />
+      <ul>
+     
+        <li>
+          <i class="fa-solid fa-signature"></i>
+          <a href="#">Signature</a></li>
+      </ul>
+      <hr />
+
+      <ul>
+        <li>
+          <i class="fa-solid fa-square-poll-vertical"></i>
+          <a href="">Results</a>
+          <ul>
+            <ul>
+              <li>
+                <a href="#" onclick="carusltPage()" >CA Results</a>
+              </li>
+              <li><a href="#" onclick="finalRusltPage() ">Final Results</a></li>
+            </ul>
+          </ul>
+        </li>
+      </ul>
+      <hr />
+      <ul>
+        <li>
+          <i class="fa-sharp fa-solid fa-right-from-bracket"></i>
+          <a href="#">LogOut</a></li>
+      </ul>
+    </div>
+
+    <!-- <div id="right-content-one">
+      <ul>
+        <li>
+          <a href="#">
+            <div class="container-1">
+              <i class="fa-sharp fa-solid fa-registered"></i>
+             <p>Registration</p>
+          </div>
+          </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="container-2">
+            <i class="fa-sharp fa-regular fa-clipboard"></i>
+           <p> Upload Resuts</p>
+        </div>
+        </a>
+    </li>
+    <li>
+      <a href="#">
+        <div class="container-3">
+          <i class="fa-sharp fa-solid fa-registered"></i>
+         <p>Registration</p>
+      </div>
+      </a>
+  </li>
+      </ul>
+      <hr> -->
+      
+    </div>
+    <div id="right-content">
+        
+    </div>
+
+    <script>
+        function regpagePopup() {
+          // Define the URL of the pop-up window
+          var url = "studentreg.html";
+          
+          // Define the size and position of the pop-up window
+          var width = 600;
+          var height = 400;
+          var left = (screen.width - width) / 2;
+          var top = (screen.height - height) / 2;
+          
+          // Open the pop-up window
+          window.open(url, "pop-up-window", "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top);
+        }
+    </script>
+<!-- For upload ruslts -->
+    <script>
+      function loadPage() {
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          document.getElementById("right-content").innerHTML = xhr.responseText;
+        }
+      };
+      xhr.open("GET", "resultupload.html", true);
+      xhr.send();
+    }
+    </script>
+<!-- for checking results -->
+    <script>
+      function carusltPage() {
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          document.getElementById("right-content").innerHTML = xhr.responseText;
+        }
+      };
+      xhr.open("GET", "caresultpage.html", true);
+      xhr.send();
+    }
+    </script>
+    <!-- Final results -->
+    <script>
+      function finalRusltPage() {
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          document.getElementById("right-content").innerHTML = xhr.responseText;
+        }
+      };
+      xhr.open("GET", "finalresultpahe.html", true);
+      xhr.send();
+    }
+    </script>
+
+    <!-- for Register students -->
+    <script>
+      function registStudentPage() {
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          document.getElementById("right-content").innerHTML = xhr.responseText;
+        }
+      };
+      xhr.open("GET", "studentreg.html", true);
+      xhr.send();
+    }
+    </script>
+
+    <!-- Claim scripts pop up -->
+    <script>
+      function claimPopup() {
+        // Define the URL of the pop-up window
+        var url = "components/claimpopup.html";
+        
+        // Define the size and position of the pop-up window
+        var width = 600;
+        var height = 400;
+        var left = (screen.width - width) / 2;
+        var top = (screen.height - height) / 2;
+        
+        // Open the pop-up window
+        window.open(url, "pop-up-window", "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top);
+      }
+      </script>
+
+      <script>
+        function signPopup() {
+          // Define the URL of the pop-up window
+          
+          
+          // Define the size and position of the pop-up window
+          var width = 600;
+          var height = 400;
+          var left = (screen.width - width) / 2;
+          var top = (screen.height - height) / 2;
+          
+          // Open the pop-up window
+          window.alert("Are you sure you want to Sign this Results")
+        }
+        </script>
+  </body>
+</html>
