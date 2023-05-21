@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+  {% load static %}
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="style/mainstyle.css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'nitsims/mainstyle.css' %}" />
     <script
       src="https://kit.fontawesome.com/2426fea4b2.js"
       crossorigin="anonymous"
@@ -33,30 +34,9 @@
       <ul>
         <li>
           <i class="fa-sharp fa-solid fa-registered"></i>
-          <a href="examreg.html">Register Exam</a></li>
+          <a href="{% url 'examreg' %}">Register Exam</a></li>
       </ul>
       <hr />
-      <!-- <ul>
-        <li>
-          <i class="fa-sharp fa-solid fa-registered"></i>
-          <a href="#" onclick="registStudentPage()">Registration</a></li>
-      </ul>
-      <hr /> -->
-      <!-- <ul>
-        <li>
-          <i class="fa-solid fa-square-poll-vertical"></i>
-          <a href="">Results</a>
-          <ul>
-            <ul>
-              <li>
-                <a href="#" onclick="carusltPage()" >CA Results</a>
-              </li>
-              <li><a href="#" onclick="finalRusltPage() ">Final Results</a></li>
-            </ul>
-          </ul>
-        </li>
-      </ul> -->
-      <!-- <hr /> -->
       <ul>
         <li>
           <i class="fa-sharp fa-solid fa-right-from-bracket"></i>
@@ -66,16 +46,16 @@
 
     <div id="right-content-one">
       <ul>
-        <li>
+        {% comment %} <li>
           <a href="registerstd.html">
             <div class="container-1">
               <i class="fa-sharp fa-solid fa-registered"></i>
              <p>Registration</p>
           </div>
           </a>
-      </li>
+      </li> {% endcomment %}
       <li>
-        <a href="resultupload.html">
+        <a href="{% url 'resultupload' %}">
           <div class="container-2">
             <i class="fa-sharp fa-regular fa-clipboard"></i>
            <p> Upload Resuts</p>
@@ -83,7 +63,7 @@
         </a>
     </li>
     <li>
-      <a href="allresults.html">
+      <a href="{% url 'allresults' %}">
         <div class="container-3">
           <i class="fa-solid fa-square-poll-vertical"></i>
          <p>Results</p>

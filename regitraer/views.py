@@ -7,6 +7,17 @@ def homepage(request):
     return render(request,'dashboard.html',)
 
 
+def teacherdash(request):
+    return render(request,'teacherdash.html',)
+
+
+
+def admindash(request):
+    return render(request,'admindash.html',)
+
+
+def studentdash(request):
+    return render(request,'studentdash.html',)
 
 def caresultPage(request):
     # cadata=Result.objects.get(studentDetails='1001')
@@ -72,3 +83,13 @@ def uploadResults(request):
         return render(request,print('suncess'))
     else:
          return render(request,print('fail'))
+
+
+def examreg(request):
+    return render(request,'examreg.html',)
+
+
+
+
+def allresults(request):
+    return render (request, 'allresults.html')
