@@ -3,9 +3,14 @@ from django.http import HttpResponse
 from .models import Result,Student
 # Create your views here.
 
+def loginpage(request):
+    return render(request,'loginpage.html',)
+
+
+
+
 def homepage(request):
     return render(request,'dashboard.html',)
-
 
 def teacherdash(request):
     return render(request,'teacherdash.html',)
@@ -93,3 +98,4 @@ def examreg(request):
 
 def allresults(request):
     return render (request, 'allresults.html')
+

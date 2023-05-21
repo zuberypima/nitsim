@@ -1,8 +1,8 @@
 from django.urls import path
-from .views import homepage,caresultPage,resultUpload,regStudent,claimpage,regfunc,teacherdash,studentdash,examreg,admindash,allresults
+from .views import homepage,caresultPage,resultUpload,regStudent,claimpage,regfunc,teacherdash,studentdash,examreg,admindash,allresults,loginpage
 
 urlpatterns = [
-    path("dashboard",homepage, name='dashboard'),
+    path("loginpage",loginpage, name='loginpage'),
     path("teacherdash",teacherdash, name='teacherdash'),
     path("admindash",admindash, name='admindash'),
     path("studentdash",studentdash, name='studentdash'),
