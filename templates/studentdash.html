@@ -103,7 +103,7 @@
           document.getElementById("right-content").innerHTML = xhr.responseText;
         }
       };
-      xhr.open("GET", "caresultpage.html", true);
+      xhr.open("GET", "{% url 'caresultpage' %}", true);
       xhr.send();
     }
     </script>
@@ -116,7 +116,7 @@
           document.getElementById("right-content").innerHTML = xhr.responseText;
         }
       };
-      xhr.open("GET", "finalresultpahe.html", true);
+      xhr.open("GET", "finalresultpahe", true);
       xhr.send();
     }
     </script>

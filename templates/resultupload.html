@@ -16,6 +16,7 @@
     <div class="result">
       <div class="result-head"><p>Upload Student Result</p></div>
       <form action="" method="post">
+        {% csrf_token %}
         <div class="input-type">
           <label for="">Programm :</label>
           <input type="text" />
