@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Result,Student
+from .models import Result,Student,ProgramReg,Exam
 # Create your views here.
 
 def loginpage(request):
@@ -76,6 +76,7 @@ def claimpage(request):
 
 
 
+
 # upload result students result
 def uploadResults(request):
     if request.method == "POST":
@@ -90,12 +91,29 @@ def uploadResults(request):
          return render(request,print('fail'))
 
 
+def program(request):
+     programs =ProgramReg.objects.all()
+     return render (request, 'examreg.html',{'programs':programs})
+
+
 def examreg(request):
-    return render(request,'examreg.html',)
+    if request.method == "POST":
+        programId =request.POST.get('program')
+        modulename =request.POST.get('modulename')
+        # date = request.POST.get('date')
+        totalmarks = request.POST.get('totalmarks')
+        # exam = Exam(programname=program,course=modulename,totalmarks=totalmarks)
+    return render(request,'examreg.html',{})
 
 
 
 
 def allresults(request):
     return render (request, 'allresults.html')
+
+
+
+# def programreg(request):
+#     program =ProgramReg.objects.all()
+#     return render(request,'examreg.html',{'program':program})
 

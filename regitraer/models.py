@@ -51,3 +51,15 @@ class Result(models.Model):
     evidenceFile =models.ImageField(blank=True)
     def __str__(self):
         return str(self.studentDetails)
+    
+
+
+class Exam(models.Model):
+    programname =models.ForeignKey(ProgramReg, on_delete=models.CASCADE)
+    course =models.ForeignKey (CourseRegitration,on_delete=models.CASCADE)
+    # modulename =models.CharField(max_length=200) 
+    examtype =models.CharField(max_length=255, blank=True)
+    # date=models.ForeignKey(ProgramReg,on_delete=models.CASCADE)
+    totalmarks =models.ImageField(null=True, blank=True)
+    def __str__(self):
+        return self.modulename+" "+self.examtype
