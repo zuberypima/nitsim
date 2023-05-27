@@ -29,16 +29,16 @@ class CourseRegitration(models.Model):
     
 
     #students registration numbers 
-# class RegNumber(models.Model):
-#     regNo =models.CharField(unique=True,max_length=255)
-#     def __str__(self):
-#         return self.regNo
+class RegNumber(models.Model):
+    regNo =models.CharField(unique=True,max_length=255)
+    def __str__(self):
+        return self.regNo
     
 
 class Student(models.Model):
     firstName =models.CharField(max_length=255)
     lastName =models.CharField(max_length=200) 
-    registrtionNo =models.CharField(max_length=255,unique=True)
+    registrtionNo =models.OneToOneField(RegNumber,on_delete=models.CASCADE)
     program=models.ForeignKey(ProgramReg,on_delete=models.CASCADE)
     image =models.ImageField(null=True, blank=True)
     def __str__(self):

@@ -1,13 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Student,ProgramReg
+from .models import Student,ProgramReg,Student
 from .forms import PrograMform,CourseRegForm,StudentRegForm
 # Create your views here.
 
 
 def add_program(request):
     if request.method == 'POST':
-        form = ProgramReg(request.POST)
+        form = PrograMform(request.POST)
         if form.is_valid():
             form.save()
             # return redirect('book-list')
@@ -19,7 +19,7 @@ def add_program(request):
 
 def add_course(request):
     if request.method == 'POST':
-        form = ProgramReg(request.POST)
+        form = CourseRegForm(request.POST)
         if form.is_valid():
             form.save()
             # return redirect('book-list')
@@ -32,7 +32,7 @@ def add_course(request):
 
 def add_student(request):
     if request.method == 'POST':
-        form = ProgramReg(request.POST)
+        form = StudentRegForm(request.POST)
         if form.is_valid():
             form.save()
             # return redirect('book-list')

@@ -18,3 +18,9 @@ def add_exam(request):
 
 def  teacherdashboard(request):
     return render (request, 'teacherdash.html')
+
+def  results(request):
+    return render (request, 'allresults.html')
+
+def  ca_results(request):
+    return render (request, 'ca_results.html')
