@@ -1,15 +1,20 @@
 from django.shortcuts import render
-
+from .models import Exam
+from .forms import ExamRegForm
 # Create your views here.
 
 
 
 def add_exam(request):
     if request.method == 'POST':
-        form = BookForm(request.POST)
+        form = ExamRegForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('book-list')
+            # return redirect('book-list')
     else:
-        form = BookForm()
-    return render(request, 'books/add_book.html', {'form': form})
+        form = ExamRegForm()
+    return render(request, 'examregister.html', {'form': form})
+
+
+def  teacherdashboard(request):
+    return render (request, 'teacherdash.html')

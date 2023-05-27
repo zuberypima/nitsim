@@ -1,5 +1,6 @@
 from django.db import models
 from regitraer.models import ProgramReg,CourseRegitration
+from regitraer.models import ProgramReg
 # Create your models here.
 
 
@@ -10,9 +11,9 @@ class Result(models.Model):
     
 
 class Exam(models.Model):
-    program= models.CharField(max_length=255 )
-    modulecode =models.CharField(max_length=255)
-    totalmarks =models.CharField(max_length=255)
-    examtype =models.CharField(max_length=255)
+    programName= models.ForeignKey(ProgramReg, on_delete=models.CASCADE,max_length=255)
+    moduleCode =models.CharField(max_length=255)
+    totalMarks =models.CharField(max_length=255)
+    examType =models.CharField(max_length=255)
     def __str__(self):
-        return self.modulecode+" "+self.examtype
+        return self.moduleCode+" "+self.examType

@@ -45,4 +45,11 @@ def add_student(request):
 
 
 def student_list(request):
-    return render (request, 'studentlist.htnl')
+    return render (request, 'studentlist.html')
+
+
+def registerdash(request):
+    return render (request, 'admindash.html')
+
+def studentdahs(request):
+    return render (request, 'studentdash.html')
