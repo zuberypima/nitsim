@@ -41,45 +41,24 @@
           
         </tr>
         <tr>
-          <td>Cell 1</td>
-          <td>Database Concept</td>
-          <td>9</td>
-          <td>35</td>
-          <td>40</td>
-          <td>75</td>
-          <td>A</td>
+          {% for caresult in caresults %}
+          <td>{{caresult.registrationNo}}</td>
+          <td>{{caresult.moduleName}}</td>
+          <td>{{caresult.test_1}}</td>
+          <td>{{caresult.test_2}}</td>
+          <td>{{caresult.quize_1}}</td>
+          <td>{{caresult.quize_2}}</td>
+          <td>{{caresult.id}}</td>
           <td>Pass</td>
           <td>
-          <button type="submit" id="claim-button" onclick="claimPopup()">Update</button>
+          <a href="{% url 'updateca' 'caresult.id' %}"><button type="submit" id="claim-button" onclick="claimPopup()">Update</button></a>
           </td>
+          {% endfor %}
+         
         </tr>
       </table>
  
-    {% comment %} <h1>Total Points</h1>
-    <hr>
-    <table  class="table2">
-      <tr>
-        <td>Total Unit</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Cell 1</td>
-        <td>150</td>
-      </tr>
-      <tr>
-        <td>Points</td>
-        <td>639</td>
-      </tr>
-      <tr>
-        <td>Annula GPA</td>
-        <td>4.3</td>
-      </tr>
-      <tr>
-        <td>Annula Remarks</td>
-        <td>Pass</td>
-      </tr>
-    </table>
-  </div> {% endcomment %}
+
   <!-- <script>
     function claimPopup() {
       // Define the URL of the pop-up window

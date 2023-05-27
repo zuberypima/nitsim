@@ -1,3 +1,4 @@
+import uuid
 from django.db import models
 from regitraer.models import ProgramReg,CourseRegitration
 from regitraer.models import ProgramReg,Student,RegNumber
@@ -20,13 +21,13 @@ class Exam(models.Model):
     
 
 class CaResult(models.Model):
-    registrationNo =models.ForeignKey(RegNumber, on_delete=models.CASCADE)
+    registrationNo =models.OneToOneField(RegNumber, on_delete=models.CASCADE)
     moduleName=models.ForeignKey(CourseRegitration,on_delete=models.CASCADE)
     test_1=models.CharField(max_length=255)
     test_2=models.CharField(max_length=255)
     quize_1=models.CharField(max_length=255)
     quize_2=models.CharField(max_length=255)
     attendance=models.CharField(max_length=255)
-
+    id =models.UUIDField(default=uuid.uuid4,primary_key=True,unique=True,editable=False)
     def __str__(self):
-       return self.registrationNo
+       return str(self.registrationNo)
